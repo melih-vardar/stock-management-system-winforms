@@ -10,7 +10,7 @@ namespace StockManagementSystem.Models
     {
         public AppDbContext CreateDbContext(string[] args)
         {
-            string connectionString = "server=localhost;user=root;password=yourpassword;database=stockmanagement";
+            string connectionString = "server=localhost;user=root;password=root;database=stockmanagement;allowPublicKeyRetrieval=true;sslMode=none";
             
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
@@ -21,7 +21,7 @@ namespace StockManagementSystem.Models
 
     public static class DbConfig
     {
-        private static string _connectionString = "server=localhost;user=root;password=yourpassword;database=stockmanagement";
+        private static string _connectionString = "server=localhost;user=root;password=root;database=stockmanagement;allowPublicKeyRetrieval=true;sslMode=none";
 
         public static AppDbContext CreateDbContext()
         {

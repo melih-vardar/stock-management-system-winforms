@@ -2,6 +2,7 @@ using StockManagementSystem.Models;
 using StockManagementSystem.Models.Repositories;
 using System;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 
 namespace StockManagementSystem
 {
@@ -20,6 +21,11 @@ namespace StockManagementSystem
             {
                 // Initialize the database context and repositories
                 _dbContext = DbConfig.CreateDbContext();
+                
+                // Test the database connection
+                _dbContext.Database.CanConnect();
+                
+                // Initialize repositories
                 _productRepository = new ProductRepository(_dbContext);
                 _orderRepository = new PurchaseOrderRepository(_dbContext);
                 _transactionRepository = new StockTransactionRepository(_dbContext);
@@ -28,23 +34,35 @@ namespace StockManagementSystem
                 _dbContext.Database.EnsureCreated();
                 
                 // Seed the database with sample data
-                DbSeeder.SeedData(_dbContext);
+                if (_dbContext.Products.CountAsync().Result == 0)
+                {
+                    DbSeeder.SeedData(_dbContext);
+                }
+                
+                // Set up event handlers
+                this.Load += Form1_Load;
+                btnAddProduct.Click += BtnAddProduct_Click;
+                btnEditProduct.Click += BtnEditProduct_Click;
+                btnDeleteProduct.Click += BtnDeleteProduct_Click;
+                btnStockIn.Click += BtnStockIn_Click;
+                btnStockOut.Click += BtnStockOut_Click;
+                btnCreateOrder.Click += BtnCreateOrder_Click;
+                btnViewOrder.Click += BtnViewOrder_Click;
+                btnApproveOrder.Click += BtnApproveOrder_Click;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database connection error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string errorMessage = $"Database connection error: {ex.Message}";
+                if (ex.InnerException != null)
+                {
+                    errorMessage += $"\nInner Exception: {ex.InnerException.Message}";
+                }
+                
+                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                // Disable controls since we can't connect to the database
+                tabControl1.Enabled = false;
             }
-
-            // Set up event handlers
-            this.Load += Form1_Load;
-            btnAddProduct.Click += BtnAddProduct_Click;
-            btnEditProduct.Click += BtnEditProduct_Click;
-            btnDeleteProduct.Click += BtnDeleteProduct_Click;
-            btnStockIn.Click += BtnStockIn_Click;
-            btnStockOut.Click += BtnStockOut_Click;
-            btnCreateOrder.Click += BtnCreateOrder_Click;
-            btnViewOrder.Click += BtnViewOrder_Click;
-            btnApproveOrder.Click += BtnApproveOrder_Click;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -1,0 +1,94 @@
+# Visual Studio / .NET Core specific
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# User-specific files
+*.rsuser
+*.swp
+*~
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# VS Code directories
+.ionide/
+
+# Local History for Visual Studio
+.localhistory/
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
+
+# Windows Forms Designer generated code
+# If you're using source control, you probably don't want to add generated files to it
+# You can disable this warning by setting the "DesignerCodeGeneration" property to "OnBuild"
+# Or you can selectively exclude specific designer files if you prefer.
+# *Designer.cs
+
+# Entity Framework Core Migrations
+# If you're using source control, you might want to ignore these files as they
+# can be recreated from your models
+# Migrations/
+
+# Configuration files with sensitive information
+appsettings.Development.json
+appsettings.Production.json
+# You might want to include an example config
+# !appsettings.Example.json
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific Visual Studio Code settings
+.vscode/settings.json
+
+# Local database backup files
+*.bak 

@@ -409,3 +409,5 @@ partial class Form1
     private System.Windows.Forms.ToolStripMenuItem transactionReportToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem ordersReportToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+}
