@@ -28,352 +28,396 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        this.tabControl1 = new System.Windows.Forms.TabControl();
-        this.tabProducts = new System.Windows.Forms.TabPage();
-        this.btnAddProduct = new System.Windows.Forms.Button();
-        this.btnEditProduct = new System.Windows.Forms.Button();
-        this.btnDeleteProduct = new System.Windows.Forms.Button();
-        this.dgvProducts = new System.Windows.Forms.DataGridView();
-        this.tabInventory = new System.Windows.Forms.TabPage();
-        this.lblLowStock = new System.Windows.Forms.Label();
-        this.dgvLowStock = new System.Windows.Forms.DataGridView();
-        this.btnStockIn = new System.Windows.Forms.Button();
-        this.btnStockOut = new System.Windows.Forms.Button();
-        this.dgvTransactions = new System.Windows.Forms.DataGridView();
-        this.lblTransactions = new System.Windows.Forms.Label();
-        this.tabPurchaseOrders = new System.Windows.Forms.TabPage();
-        this.btnCreateOrder = new System.Windows.Forms.Button();
-        this.btnViewOrder = new System.Windows.Forms.Button();
-        this.btnApproveOrder = new System.Windows.Forms.Button();
-        this.lblPendingOrders = new System.Windows.Forms.Label();
-        this.dgvPendingOrders = new System.Windows.Forms.DataGridView();
-        this.dgvOrders = new System.Windows.Forms.DataGridView();
-        this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-        this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-        this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-        this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.stockReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.transactionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.ordersReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
-        this.tabControl1.SuspendLayout();
-        this.tabProducts.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-        this.tabInventory.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvLowStock)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
-        this.tabPurchaseOrders.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvPendingOrders)).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
-        this.statusStrip1.SuspendLayout();
-        this.menuStrip1.SuspendLayout();
-        this.SuspendLayout();
-
+        tabControl1 = new TabControl();
+        tabProducts = new TabPage();
+        dgvProducts = new DataGridView();
+        btnAddProduct = new Button();
+        btnEditProduct = new Button();
+        btnDeleteProduct = new Button();
+        tabInventory = new TabPage();
+        lblLowStock = new Label();
+        dgvLowStock = new DataGridView();
+        btnStockIn = new Button();
+        btnStockOut = new Button();
+        dgvTransactions = new DataGridView();
+        lblTransactions = new Label();
+        tabPurchaseOrders = new TabPage();
+        lblPendingOrders = new Label();
+        dgvPendingOrders = new DataGridView();
+        btnCreateOrder = new Button();
+        btnViewOrder = new Button();
+        btnApproveOrder = new Button();
+        dgvOrders = new DataGridView();
+        statusStrip1 = new StatusStrip();
+        statusLabel = new ToolStripStatusLabel();
+        menuStrip1 = new MenuStrip();
+        fileToolStripMenuItem = new ToolStripMenuItem();
+        settingsToolStripMenuItem = new ToolStripMenuItem();
+        exitToolStripMenuItem = new ToolStripMenuItem();
+        reportsToolStripMenuItem = new ToolStripMenuItem();
+        stockReportToolStripMenuItem = new ToolStripMenuItem();
+        transactionReportToolStripMenuItem = new ToolStripMenuItem();
+        ordersReportToolStripMenuItem = new ToolStripMenuItem();
+        helpToolStripMenuItem = new ToolStripMenuItem();
+        aboutToolStripMenuItem = new ToolStripMenuItem();
+        tabControl1.SuspendLayout();
+        tabProducts.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+        tabInventory.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvLowStock).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
+        tabPurchaseOrders.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvPendingOrders).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvOrders).BeginInit();
+        statusStrip1.SuspendLayout();
+        menuStrip1.SuspendLayout();
+        SuspendLayout();
+        // 
         // tabControl1
-        this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.tabControl1.Location = new System.Drawing.Point(0, 24);
-        this.tabControl1.Name = "tabControl1";
-        this.tabControl1.SelectedIndex = 0;
-        this.tabControl1.Size = new System.Drawing.Size(800, 404);
-        this.tabControl1.TabIndex = 0;
-        this.tabControl1.Controls.Add(this.tabProducts);
-        this.tabControl1.Controls.Add(this.tabInventory);
-        this.tabControl1.Controls.Add(this.tabPurchaseOrders);
-
+        // 
+        tabControl1.Controls.Add(tabProducts);
+        tabControl1.Controls.Add(tabInventory);
+        tabControl1.Controls.Add(tabPurchaseOrders);
+        tabControl1.Dock = DockStyle.Fill;
+        tabControl1.Location = new Point(0, 24);
+        tabControl1.Margin = new Padding(4, 3, 4, 3);
+        tabControl1.Name = "tabControl1";
+        tabControl1.SelectedIndex = 0;
+        tabControl1.Size = new Size(933, 473);
+        tabControl1.TabIndex = 0;
+        // 
         // tabProducts
-        this.tabProducts.Location = new System.Drawing.Point(4, 22);
-        this.tabProducts.Name = "tabProducts";
-        this.tabProducts.Padding = new System.Windows.Forms.Padding(3);
-        this.tabProducts.Size = new System.Drawing.Size(792, 378);
-        this.tabProducts.TabIndex = 0;
-        this.tabProducts.Text = "Products";
-        this.tabProducts.UseVisualStyleBackColor = true;
-        this.tabProducts.Controls.Add(this.dgvProducts);
-        this.tabProducts.Controls.Add(this.btnAddProduct);
-        this.tabProducts.Controls.Add(this.btnEditProduct);
-        this.tabProducts.Controls.Add(this.btnDeleteProduct);
-
+        // 
+        tabProducts.Controls.Add(dgvProducts);
+        tabProducts.Controls.Add(btnAddProduct);
+        tabProducts.Controls.Add(btnEditProduct);
+        tabProducts.Controls.Add(btnDeleteProduct);
+        tabProducts.Location = new Point(4, 24);
+        tabProducts.Margin = new Padding(4, 3, 4, 3);
+        tabProducts.Name = "tabProducts";
+        tabProducts.Padding = new Padding(4, 3, 4, 3);
+        tabProducts.Size = new Size(925, 445);
+        tabProducts.TabIndex = 0;
+        tabProducts.Text = "Products";
+        tabProducts.UseVisualStyleBackColor = true;
+        // 
         // dgvProducts
-        this.dgvProducts.AllowUserToAddRows = false;
-        this.dgvProducts.AllowUserToDeleteRows = false;
-        this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvProducts.Location = new System.Drawing.Point(8, 47);
-        this.dgvProducts.Name = "dgvProducts";
-        this.dgvProducts.ReadOnly = true;
-        this.dgvProducts.Size = new System.Drawing.Size(776, 323);
-        this.dgvProducts.TabIndex = 0;
-        
+        // 
+        dgvProducts.AllowUserToAddRows = false;
+        dgvProducts.AllowUserToDeleteRows = false;
+        dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvProducts.Location = new Point(9, 54);
+        dgvProducts.Margin = new Padding(4, 3, 4, 3);
+        dgvProducts.Name = "dgvProducts";
+        dgvProducts.ReadOnly = true;
+        dgvProducts.Size = new Size(905, 373);
+        dgvProducts.TabIndex = 0;
+        // 
         // btnAddProduct
-        this.btnAddProduct.Location = new System.Drawing.Point(8, 16);
-        this.btnAddProduct.Name = "btnAddProduct";
-        this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-        this.btnAddProduct.TabIndex = 1;
-        this.btnAddProduct.Text = "Add";
-        this.btnAddProduct.UseVisualStyleBackColor = true;
-        
+        // 
+        btnAddProduct.Location = new Point(9, 18);
+        btnAddProduct.Margin = new Padding(4, 3, 4, 3);
+        btnAddProduct.Name = "btnAddProduct";
+        btnAddProduct.Size = new Size(88, 27);
+        btnAddProduct.TabIndex = 1;
+        btnAddProduct.Text = "Add";
+        btnAddProduct.UseVisualStyleBackColor = true;
+        // 
         // btnEditProduct
-        this.btnEditProduct.Location = new System.Drawing.Point(89, 16);
-        this.btnEditProduct.Name = "btnEditProduct";
-        this.btnEditProduct.Size = new System.Drawing.Size(75, 23);
-        this.btnEditProduct.TabIndex = 2;
-        this.btnEditProduct.Text = "Edit";
-        this.btnEditProduct.UseVisualStyleBackColor = true;
-        
+        // 
+        btnEditProduct.Location = new Point(104, 18);
+        btnEditProduct.Margin = new Padding(4, 3, 4, 3);
+        btnEditProduct.Name = "btnEditProduct";
+        btnEditProduct.Size = new Size(88, 27);
+        btnEditProduct.TabIndex = 2;
+        btnEditProduct.Text = "Edit";
+        btnEditProduct.UseVisualStyleBackColor = true;
+        // 
         // btnDeleteProduct
-        this.btnDeleteProduct.Location = new System.Drawing.Point(170, 16);
-        this.btnDeleteProduct.Name = "btnDeleteProduct";
-        this.btnDeleteProduct.Size = new System.Drawing.Size(75, 23);
-        this.btnDeleteProduct.TabIndex = 3;
-        this.btnDeleteProduct.Text = "Delete";
-        this.btnDeleteProduct.UseVisualStyleBackColor = true;
-
+        // 
+        btnDeleteProduct.Location = new Point(198, 18);
+        btnDeleteProduct.Margin = new Padding(4, 3, 4, 3);
+        btnDeleteProduct.Name = "btnDeleteProduct";
+        btnDeleteProduct.Size = new Size(88, 27);
+        btnDeleteProduct.TabIndex = 3;
+        btnDeleteProduct.Text = "Delete";
+        btnDeleteProduct.UseVisualStyleBackColor = true;
+        // 
         // tabInventory
-        this.tabInventory.Location = new System.Drawing.Point(4, 22);
-        this.tabInventory.Name = "tabInventory";
-        this.tabInventory.Padding = new System.Windows.Forms.Padding(3);
-        this.tabInventory.Size = new System.Drawing.Size(792, 378);
-        this.tabInventory.TabIndex = 1;
-        this.tabInventory.Text = "Inventory";
-        this.tabInventory.UseVisualStyleBackColor = true;
-        this.tabInventory.Controls.Add(this.lblLowStock);
-        this.tabInventory.Controls.Add(this.dgvLowStock);
-        this.tabInventory.Controls.Add(this.btnStockIn);
-        this.tabInventory.Controls.Add(this.btnStockOut);
-        this.tabInventory.Controls.Add(this.dgvTransactions);
-        this.tabInventory.Controls.Add(this.lblTransactions);
-
+        // 
+        tabInventory.Controls.Add(lblLowStock);
+        tabInventory.Controls.Add(dgvLowStock);
+        tabInventory.Controls.Add(btnStockIn);
+        tabInventory.Controls.Add(btnStockOut);
+        tabInventory.Controls.Add(dgvTransactions);
+        tabInventory.Controls.Add(lblTransactions);
+        tabInventory.Location = new Point(4, 24);
+        tabInventory.Margin = new Padding(4, 3, 4, 3);
+        tabInventory.Name = "tabInventory";
+        tabInventory.Padding = new Padding(4, 3, 4, 3);
+        tabInventory.Size = new Size(925, 445);
+        tabInventory.TabIndex = 1;
+        tabInventory.Text = "Inventory";
+        tabInventory.UseVisualStyleBackColor = true;
+        // 
         // lblLowStock
-        this.lblLowStock.AutoSize = true;
-        this.lblLowStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.lblLowStock.Location = new System.Drawing.Point(8, 16);
-        this.lblLowStock.Name = "lblLowStock";
-        this.lblLowStock.Size = new System.Drawing.Size(129, 13);
-        this.lblLowStock.TabIndex = 0;
-        this.lblLowStock.Text = "Products with Low Stock";
-
+        // 
+        lblLowStock.AutoSize = true;
+        lblLowStock.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        lblLowStock.Location = new Point(9, 18);
+        lblLowStock.Margin = new Padding(4, 0, 4, 0);
+        lblLowStock.Name = "lblLowStock";
+        lblLowStock.Size = new Size(148, 13);
+        lblLowStock.TabIndex = 0;
+        lblLowStock.Text = "Products with Low Stock";
+        // 
         // dgvLowStock
-        this.dgvLowStock.AllowUserToAddRows = false;
-        this.dgvLowStock.AllowUserToDeleteRows = false;
-        this.dgvLowStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvLowStock.Location = new System.Drawing.Point(8, 32);
-        this.dgvLowStock.Name = "dgvLowStock";
-        this.dgvLowStock.ReadOnly = true;
-        this.dgvLowStock.Size = new System.Drawing.Size(776, 100);
-        this.dgvLowStock.TabIndex = 1;
-
+        // 
+        dgvLowStock.AllowUserToAddRows = false;
+        dgvLowStock.AllowUserToDeleteRows = false;
+        dgvLowStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvLowStock.Location = new Point(9, 37);
+        dgvLowStock.Margin = new Padding(4, 3, 4, 3);
+        dgvLowStock.Name = "dgvLowStock";
+        dgvLowStock.ReadOnly = true;
+        dgvLowStock.Size = new Size(905, 115);
+        dgvLowStock.TabIndex = 1;
+        // 
         // btnStockIn
-        this.btnStockIn.Location = new System.Drawing.Point(628, 138);
-        this.btnStockIn.Name = "btnStockIn";
-        this.btnStockIn.Size = new System.Drawing.Size(75, 23);
-        this.btnStockIn.TabIndex = 2;
-        this.btnStockIn.Text = "Stock In";
-        this.btnStockIn.UseVisualStyleBackColor = true;
-
+        // 
+        btnStockIn.Location = new Point(733, 159);
+        btnStockIn.Margin = new Padding(4, 3, 4, 3);
+        btnStockIn.Name = "btnStockIn";
+        btnStockIn.Size = new Size(88, 27);
+        btnStockIn.TabIndex = 2;
+        btnStockIn.Text = "Stock In";
+        btnStockIn.UseVisualStyleBackColor = true;
+        // 
         // btnStockOut
-        this.btnStockOut.Location = new System.Drawing.Point(709, 138);
-        this.btnStockOut.Name = "btnStockOut";
-        this.btnStockOut.Size = new System.Drawing.Size(75, 23);
-        this.btnStockOut.TabIndex = 3;
-        this.btnStockOut.Text = "Stock Out";
-        this.btnStockOut.UseVisualStyleBackColor = true;
-
-        // lblTransactions
-        this.lblTransactions.AutoSize = true;
-        this.lblTransactions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.lblTransactions.Location = new System.Drawing.Point(8, 143);
-        this.lblTransactions.Name = "lblTransactions";
-        this.lblTransactions.Size = new System.Drawing.Size(115, 13);
-        this.lblTransactions.TabIndex = 4;
-        this.lblTransactions.Text = "Recent Transactions";
-
+        // 
+        btnStockOut.Location = new Point(827, 159);
+        btnStockOut.Margin = new Padding(4, 3, 4, 3);
+        btnStockOut.Name = "btnStockOut";
+        btnStockOut.Size = new Size(88, 27);
+        btnStockOut.TabIndex = 3;
+        btnStockOut.Text = "Stock Out";
+        btnStockOut.UseVisualStyleBackColor = true;
+        // 
         // dgvTransactions
-        this.dgvTransactions.AllowUserToAddRows = false;
-        this.dgvTransactions.AllowUserToDeleteRows = false;
-        this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvTransactions.Location = new System.Drawing.Point(8, 167);
-        this.dgvTransactions.Name = "dgvTransactions";
-        this.dgvTransactions.ReadOnly = true;
-        this.dgvTransactions.Size = new System.Drawing.Size(776, 205);
-        this.dgvTransactions.TabIndex = 5;
-
+        // 
+        dgvTransactions.AllowUserToAddRows = false;
+        dgvTransactions.AllowUserToDeleteRows = false;
+        dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvTransactions.Location = new Point(9, 193);
+        dgvTransactions.Margin = new Padding(4, 3, 4, 3);
+        dgvTransactions.Name = "dgvTransactions";
+        dgvTransactions.ReadOnly = true;
+        dgvTransactions.Size = new Size(905, 237);
+        dgvTransactions.TabIndex = 5;
+        // 
+        // lblTransactions
+        // 
+        lblTransactions.AutoSize = true;
+        lblTransactions.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        lblTransactions.Location = new Point(9, 165);
+        lblTransactions.Margin = new Padding(4, 0, 4, 0);
+        lblTransactions.Name = "lblTransactions";
+        lblTransactions.Size = new Size(125, 13);
+        lblTransactions.TabIndex = 4;
+        lblTransactions.Text = "Recent Transactions";
+        // 
         // tabPurchaseOrders
-        this.tabPurchaseOrders.Location = new System.Drawing.Point(4, 22);
-        this.tabPurchaseOrders.Name = "tabPurchaseOrders";
-        this.tabPurchaseOrders.Size = new System.Drawing.Size(792, 378);
-        this.tabPurchaseOrders.TabIndex = 2;
-        this.tabPurchaseOrders.Text = "Purchase Orders";
-        this.tabPurchaseOrders.UseVisualStyleBackColor = true;
-        this.tabPurchaseOrders.Controls.Add(this.lblPendingOrders);
-        this.tabPurchaseOrders.Controls.Add(this.dgvPendingOrders);
-        this.tabPurchaseOrders.Controls.Add(this.btnCreateOrder);
-        this.tabPurchaseOrders.Controls.Add(this.btnViewOrder);
-        this.tabPurchaseOrders.Controls.Add(this.btnApproveOrder);
-        this.tabPurchaseOrders.Controls.Add(this.dgvOrders);
-
+        // 
+        tabPurchaseOrders.Controls.Add(lblPendingOrders);
+        tabPurchaseOrders.Controls.Add(dgvPendingOrders);
+        tabPurchaseOrders.Controls.Add(btnCreateOrder);
+        tabPurchaseOrders.Controls.Add(btnViewOrder);
+        tabPurchaseOrders.Controls.Add(btnApproveOrder);
+        tabPurchaseOrders.Controls.Add(dgvOrders);
+        tabPurchaseOrders.Location = new Point(4, 24);
+        tabPurchaseOrders.Margin = new Padding(4, 3, 4, 3);
+        tabPurchaseOrders.Name = "tabPurchaseOrders";
+        tabPurchaseOrders.Size = new Size(925, 438);
+        tabPurchaseOrders.TabIndex = 2;
+        tabPurchaseOrders.Text = "Purchase Orders";
+        tabPurchaseOrders.UseVisualStyleBackColor = true;
+        // 
         // lblPendingOrders
-        this.lblPendingOrders.AutoSize = true;
-        this.lblPendingOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.lblPendingOrders.Location = new System.Drawing.Point(8, 16);
-        this.lblPendingOrders.Name = "lblPendingOrders";
-        this.lblPendingOrders.Size = new System.Drawing.Size(98, 13);
-        this.lblPendingOrders.TabIndex = 0;
-        this.lblPendingOrders.Text = "Pending Orders";
-
+        // 
+        lblPendingOrders.AutoSize = true;
+        lblPendingOrders.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        lblPendingOrders.Location = new Point(9, 18);
+        lblPendingOrders.Margin = new Padding(4, 0, 4, 0);
+        lblPendingOrders.Name = "lblPendingOrders";
+        lblPendingOrders.Size = new Size(94, 13);
+        lblPendingOrders.TabIndex = 0;
+        lblPendingOrders.Text = "Pending Orders";
+        // 
         // dgvPendingOrders
-        this.dgvPendingOrders.AllowUserToAddRows = false;
-        this.dgvPendingOrders.AllowUserToDeleteRows = false;
-        this.dgvPendingOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvPendingOrders.Location = new System.Drawing.Point(8, 32);
-        this.dgvPendingOrders.Name = "dgvPendingOrders";
-        this.dgvPendingOrders.ReadOnly = true;
-        this.dgvPendingOrders.Size = new System.Drawing.Size(776, 100);
-        this.dgvPendingOrders.TabIndex = 1;
-
+        // 
+        dgvPendingOrders.AllowUserToAddRows = false;
+        dgvPendingOrders.AllowUserToDeleteRows = false;
+        dgvPendingOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvPendingOrders.Location = new Point(9, 37);
+        dgvPendingOrders.Margin = new Padding(4, 3, 4, 3);
+        dgvPendingOrders.Name = "dgvPendingOrders";
+        dgvPendingOrders.ReadOnly = true;
+        dgvPendingOrders.Size = new Size(905, 115);
+        dgvPendingOrders.TabIndex = 1;
+        // 
         // btnCreateOrder
-        this.btnCreateOrder.Location = new System.Drawing.Point(8, 138);
-        this.btnCreateOrder.Name = "btnCreateOrder";
-        this.btnCreateOrder.Size = new System.Drawing.Size(100, 23);
-        this.btnCreateOrder.TabIndex = 2;
-        this.btnCreateOrder.Text = "Create Order";
-        this.btnCreateOrder.UseVisualStyleBackColor = true;
-
+        // 
+        btnCreateOrder.Location = new Point(9, 159);
+        btnCreateOrder.Margin = new Padding(4, 3, 4, 3);
+        btnCreateOrder.Name = "btnCreateOrder";
+        btnCreateOrder.Size = new Size(117, 27);
+        btnCreateOrder.TabIndex = 2;
+        btnCreateOrder.Text = "Create Order";
+        btnCreateOrder.UseVisualStyleBackColor = true;
+        // 
         // btnViewOrder
-        this.btnViewOrder.Location = new System.Drawing.Point(628, 138);
-        this.btnViewOrder.Name = "btnViewOrder";
-        this.btnViewOrder.Size = new System.Drawing.Size(75, 23);
-        this.btnViewOrder.TabIndex = 3;
-        this.btnViewOrder.Text = "View";
-        this.btnViewOrder.UseVisualStyleBackColor = true;
-
+        // 
+        btnViewOrder.Location = new Point(733, 159);
+        btnViewOrder.Margin = new Padding(4, 3, 4, 3);
+        btnViewOrder.Name = "btnViewOrder";
+        btnViewOrder.Size = new Size(88, 27);
+        btnViewOrder.TabIndex = 3;
+        btnViewOrder.Text = "View";
+        btnViewOrder.UseVisualStyleBackColor = true;
+        // 
         // btnApproveOrder
-        this.btnApproveOrder.Location = new System.Drawing.Point(709, 138);
-        this.btnApproveOrder.Name = "btnApproveOrder";
-        this.btnApproveOrder.Size = new System.Drawing.Size(75, 23);
-        this.btnApproveOrder.TabIndex = 4;
-        this.btnApproveOrder.Text = "Approve";
-        this.btnApproveOrder.UseVisualStyleBackColor = true;
-
+        // 
+        btnApproveOrder.Location = new Point(827, 159);
+        btnApproveOrder.Margin = new Padding(4, 3, 4, 3);
+        btnApproveOrder.Name = "btnApproveOrder";
+        btnApproveOrder.Size = new Size(88, 27);
+        btnApproveOrder.TabIndex = 4;
+        btnApproveOrder.Text = "Approve";
+        btnApproveOrder.UseVisualStyleBackColor = true;
+        // 
         // dgvOrders
-        this.dgvOrders.AllowUserToAddRows = false;
-        this.dgvOrders.AllowUserToDeleteRows = false;
-        this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvOrders.Location = new System.Drawing.Point(8, 167);
-        this.dgvOrders.Name = "dgvOrders";
-        this.dgvOrders.ReadOnly = true;
-        this.dgvOrders.Size = new System.Drawing.Size(776, 205);
-        this.dgvOrders.TabIndex = 5;
-
+        // 
+        dgvOrders.AllowUserToAddRows = false;
+        dgvOrders.AllowUserToDeleteRows = false;
+        dgvOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvOrders.Location = new Point(9, 193);
+        dgvOrders.Margin = new Padding(4, 3, 4, 3);
+        dgvOrders.Name = "dgvOrders";
+        dgvOrders.ReadOnly = true;
+        dgvOrders.Size = new Size(905, 237);
+        dgvOrders.TabIndex = 5;
+        // 
         // statusStrip1
-        this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabel});
-        this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-        this.statusStrip1.Name = "statusStrip1";
-        this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-        this.statusStrip1.TabIndex = 1;
-
+        // 
+        statusStrip1.Items.AddRange(new ToolStripItem[] { statusLabel });
+        statusStrip1.Location = new Point(0, 497);
+        statusStrip1.Name = "statusStrip1";
+        statusStrip1.Padding = new Padding(1, 0, 16, 0);
+        statusStrip1.Size = new Size(933, 22);
+        statusStrip1.TabIndex = 1;
+        // 
         // statusLabel
-        this.statusLabel.Name = "statusLabel";
-        this.statusLabel.Size = new System.Drawing.Size(39, 17);
-        this.statusLabel.Text = "Ready";
-
+        // 
+        statusLabel.Name = "statusLabel";
+        statusLabel.Size = new Size(39, 17);
+        statusLabel.Text = "Ready";
+        // 
         // menuStrip1
-        this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.reportsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-        this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-        this.menuStrip1.Name = "menuStrip1";
-        this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-        this.menuStrip1.TabIndex = 2;
-        this.menuStrip1.Text = "menuStrip1";
-
+        // 
+        menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, reportsToolStripMenuItem, helpToolStripMenuItem });
+        menuStrip1.Location = new Point(0, 0);
+        menuStrip1.Name = "menuStrip1";
+        menuStrip1.Padding = new Padding(7, 2, 0, 2);
+        menuStrip1.Size = new Size(933, 24);
+        menuStrip1.TabIndex = 2;
+        menuStrip1.Text = "menuStrip1";
+        // 
         // fileToolStripMenuItem
-        this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem,
-            this.exitToolStripMenuItem});
-        this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-        this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-        this.fileToolStripMenuItem.Text = "File";
-
+        // 
+        fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { settingsToolStripMenuItem, exitToolStripMenuItem });
+        fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+        fileToolStripMenuItem.Size = new Size(37, 20);
+        fileToolStripMenuItem.Text = "File";
+        // 
         // settingsToolStripMenuItem
-        this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-        this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-        this.settingsToolStripMenuItem.Text = "Settings";
-
+        // 
+        settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+        settingsToolStripMenuItem.Size = new Size(116, 22);
+        settingsToolStripMenuItem.Text = "Settings";
+        // 
         // exitToolStripMenuItem
-        this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-        this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-        this.exitToolStripMenuItem.Text = "Exit";
-
+        // 
+        exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+        exitToolStripMenuItem.Size = new Size(116, 22);
+        exitToolStripMenuItem.Text = "Exit";
+        // 
         // reportsToolStripMenuItem
-        this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stockReportToolStripMenuItem,
-            this.transactionReportToolStripMenuItem,
-            this.ordersReportToolStripMenuItem});
-        this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-        this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-        this.reportsToolStripMenuItem.Text = "Reports";
-
+        // 
+        reportsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { stockReportToolStripMenuItem, transactionReportToolStripMenuItem, ordersReportToolStripMenuItem });
+        reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+        reportsToolStripMenuItem.Size = new Size(59, 20);
+        reportsToolStripMenuItem.Text = "Reports";
+        // 
         // stockReportToolStripMenuItem
-        this.stockReportToolStripMenuItem.Name = "stockReportToolStripMenuItem";
-        this.stockReportToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-        this.stockReportToolStripMenuItem.Text = "Stock Report";
-
+        // 
+        stockReportToolStripMenuItem.Name = "stockReportToolStripMenuItem";
+        stockReportToolStripMenuItem.Size = new Size(180, 22);
+        stockReportToolStripMenuItem.Text = "Stock Report";
+        // 
         // transactionReportToolStripMenuItem
-        this.transactionReportToolStripMenuItem.Name = "transactionReportToolStripMenuItem";
-        this.transactionReportToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-        this.transactionReportToolStripMenuItem.Text = "Transaction Report";
-
+        // 
+        transactionReportToolStripMenuItem.Name = "transactionReportToolStripMenuItem";
+        transactionReportToolStripMenuItem.Size = new Size(180, 22);
+        transactionReportToolStripMenuItem.Text = "Transaction Report";
+        // 
         // ordersReportToolStripMenuItem
-        this.ordersReportToolStripMenuItem.Name = "ordersReportToolStripMenuItem";
-        this.ordersReportToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-        this.ordersReportToolStripMenuItem.Text = "Orders Report";
-
+        // 
+        ordersReportToolStripMenuItem.Name = "ordersReportToolStripMenuItem";
+        ordersReportToolStripMenuItem.Size = new Size(180, 22);
+        ordersReportToolStripMenuItem.Text = "Orders Report";
+        // 
         // helpToolStripMenuItem
-        this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-        this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-        this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-        this.helpToolStripMenuItem.Text = "Help";
-
+        // 
+        helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+        helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+        helpToolStripMenuItem.Size = new Size(44, 20);
+        helpToolStripMenuItem.Text = "Help";
+        // 
         // aboutToolStripMenuItem
-        this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-        this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-        this.aboutToolStripMenuItem.Text = "About";
-
+        // 
+        aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+        aboutToolStripMenuItem.Size = new Size(107, 22);
+        aboutToolStripMenuItem.Text = "About";
+        // 
         // Form1
-        this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Controls.Add(this.tabControl1);
-        this.Controls.Add(this.statusStrip1);
-        this.Controls.Add(this.menuStrip1);
-        this.MainMenuStrip = this.menuStrip1;
-        this.Name = "Form1";
-        this.Text = "Stock Management System";
-        
-        this.tabControl1.ResumeLayout(false);
-        this.tabProducts.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-        this.tabInventory.ResumeLayout(false);
-        this.tabInventory.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvLowStock)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
-        this.tabPurchaseOrders.ResumeLayout(false);
-        this.tabPurchaseOrders.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvPendingOrders)).EndInit();
-        ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
-        this.statusStrip1.ResumeLayout(false);
-        this.statusStrip1.PerformLayout();
-        this.menuStrip1.ResumeLayout(false);
-        this.menuStrip1.PerformLayout();
-        this.ResumeLayout(false);
-        this.PerformLayout();
+        // 
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(933, 519);
+        Controls.Add(tabControl1);
+        Controls.Add(statusStrip1);
+        Controls.Add(menuStrip1);
+        MainMenuStrip = menuStrip1;
+        Margin = new Padding(4, 3, 4, 3);
+        Name = "Form1";
+        Text = "Stock Management System";
+        tabControl1.ResumeLayout(false);
+        tabProducts.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+        tabInventory.ResumeLayout(false);
+        tabInventory.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvLowStock).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
+        tabPurchaseOrders.ResumeLayout(false);
+        tabPurchaseOrders.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvPendingOrders).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvOrders).EndInit();
+        statusStrip1.ResumeLayout(false);
+        statusStrip1.PerformLayout();
+        menuStrip1.ResumeLayout(false);
+        menuStrip1.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
